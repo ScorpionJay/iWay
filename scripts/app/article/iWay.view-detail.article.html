@@ -1,0 +1,20 @@
+
+<div class="container" style="margin-top:100px;">
+
+	<div class="panel panel-success">
+		    <div class="panel-heading">
+		      <h3 class="panel-title">
+		        {{article.titel}}
+		      </h3>
+		    </div>
+		    <div class="panel-body" ng-bind-html="trust(article.content)"> 
+		    </div>
+
+		    <div class="panel-footer">
+	            <a href="javascript:void(0);" id='sina' iway-share title="分享到新浪微博">新浪</a>
+	            <a href="javascript:void(0);" id='tx' iway-share title="分享到腾讯微博">腾讯</a>
+	            <a href="javascript:void(0);" id='qq' iway-share title="分享到QQ空间">QQ</a>
+		    </div>
+	</div>
+
+</div>
