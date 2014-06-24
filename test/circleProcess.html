@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>circle process</title>
+	</head>
+    <body>
+    	<canvas id="process" width="200px" height="200px">90%</canvas>
+
+        <script>
+        function drawProcess(){
+            var canvas = document.getElementById('process');
+            var str = canvas.textContent;
+            var process = str.substring(0,str.length-1);
+            console.log(process);
+            var context = canvas.getContext('2d');
+            
+            // gray circle
+            context.beginPath();
+            context.moveTo(100,100);
+            context.arc(100,100,44,0,Math.PI*2,true);
+            context.closePath();
+            context.fillStyle = '#ddd';
+            context.fill();
+
+            // process
+            context.beginPath();
+            context.moveTo(100, 100);
+            context.arc(100,100,44,0*(Math.PI/180),Math.PI*2*process/100,false);
+            context.closePath();
+            context.fillStyle = '#e74c3c';
+            context.fill();
+
+            // blank circle
+            context.beginPath();
+            context.moveTo(100,100);
+            context.arc(100,100,30,0*(Math.PI/180),360*(Math.PI/180),false);
+            context.closePath();
+            context.fillStyle = 'rgba(255,255,255,1)';
+            context.fill();
+
+            // a circle line 
+            context.moveTo(100, 100);
+            context.beginPath();  
+            context.arc(100, 100, 33, 0*(Math.PI/180),360*(Math.PI/180), true);  
+            context.closePath();  
+            context.strokeStyle = '#ddd';  
+            context.stroke(); 
+
+            // content
+            context.moveTo(100, 100);
+            context.fillStyle = '#e74c3c';
+            context.font = "italic 15px serif";
+            context.textBaseline = 'middle'; 
+            context.fillText(str, 85, 100);
+        }
+
+        drawProcess();
+
+        </script>
+    </body>
+</html>
