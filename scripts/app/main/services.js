@@ -9,7 +9,7 @@ define(['angular','resource'],function(){
 				var httpService = {};
 				 
 				httpService.querywithParams = function(url,params) {
-					$(#foo).show();
+					$("#foo").show();
 					var deferred = $q.defer();
 					$http({
 						method : 'get',
@@ -21,10 +21,10 @@ define(['angular','resource'],function(){
 						}
 					}).success(function(data, status, headers, config) {
 						deferred.resolve(data);
-						$(#foo).hide();
+						$("#foo").hide();
 					}).error(function(reason, status, headers, config) {
 						deferred.reject(reason);
-						$(#foo).hide();
+						$("#foo").hide();
 					});
 					return deferred.promise;
 				};
