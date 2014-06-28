@@ -55,6 +55,10 @@
 
 		<div ng-view></div>
             
+        <!-- spin -->
+        <div id="foo" style="display:none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: #000000; opacity:0.6;filter: alpha(opacity=60);" >
+            <div id="spin" style="position:fixed; top: 45%; left:45%;color:white;"></div>
+        </div>
 		<!-- import main js-->
 		<script src="vender/requirejs/require.js" data-main="scripts/requirejs-config"></script>
 
@@ -67,6 +71,22 @@
             // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             // ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+        	
+        <script>
+        	var opts = {
+                lines: 12, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 5, // The line thickness
+                radius: 10, // The radius of the inner circle
+                color: '#ffffff', // #rbg or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 100, // Afterglow percentage
+                shadow: true // Whether to render a shadow
+            };
+            var target = document.getElementById('spin');
+            var spinner = new Spinner(opts).spin(target);
+        </script>
+        
         <!--
 		<script src="vender/holder.js"></script>-->
 	</body>
