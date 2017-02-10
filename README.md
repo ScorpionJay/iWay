@@ -3,4 +3,4 @@ iWay
 
 iWay
 
-http://scorpionjay.github.io/iWay/iWay.html
+http://scorpionjay.github.io/iWay
